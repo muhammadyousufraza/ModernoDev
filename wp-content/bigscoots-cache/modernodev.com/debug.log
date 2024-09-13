@@ -1,0 +1,9 @@
+[2024-08-13 21:14:41] [bs_cache::update_plugin] - Updating to v2.8.1
+[2024-08-13 21:14:41] [cache_controller::purge_urls] - Purged specific URLs from Cloudflare cache
+[2024-08-13 21:14:41] [bs_cache::cache_purge_programmatically] - Purged BigScoots Cache for the provided URLs list: Array
+(
+    [0] => https://modernodev.com/wp-content/plugins/bigscoots-cache/assets/js/bs-cache-instant-prefetch-page.min.js
+)
+
+[2024-08-13 21:14:41] [bs_cache::opcache_purge_programmatically] - OPCache has been purged for this website.
+[2024-08-13 21:14:41] [bs_cache::update_plugin] - Update Done to v2.8.1

@@ -1,0 +1,195 @@
+.elementor-kit-7{--e-global-color-primary:#1E1E1E;--e-global-color-secondary:#FAFAFA;--e-global-color-text:#1E1E1E;--e-global-color-accent:#FAFAFA;--e-global-typography-primary-font-family:"Roboto";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Roboto Slab";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Roboto";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Roboto";--e-global-typography-accent-font-weight:500;--e-global-typography-ed89d88-font-family:"LTRemark";--e-global-typography-ed89d88-font-size:50px;--e-global-typography-ed89d88-font-weight:400;--e-global-typography-2af741e-font-family:"Inter";--e-global-typography-2af741e-font-size:25px;--e-global-typography-2af741e-font-weight:300;--e-global-typography-3e0a3d0-font-family:"Inter";--e-global-typography-3e0a3d0-font-size:20px;--e-global-typography-3e0a3d0-font-weight:bold;--e-global-typography-179aadc-font-family:"Inter";--e-global-typography-179aadc-font-size:17px;--e-global-typography-179aadc-font-weight:200;--e-global-typography-179aadc-line-height:25px;--e-global-typography-5b4a69c-font-family:"Inter";--e-global-typography-5b4a69c-font-size:17px;--e-global-typography-5b4a69c-font-weight:200;--e-global-typography-97add7c-font-family:"LTRemark";--e-global-typography-97add7c-font-size:50px;--e-global-typography-97add7c-font-weight:200;--e-global-typography-96b465f-font-family:"Inter";--e-global-typography-96b465f-font-size:25px;--e-global-typography-96b465f-font-weight:700;--e-global-typography-96b465f-line-height:1.2em;}.elementor-kit-7 a{color:var( --e-global-color-primary );text-decoration:none;}.elementor-kit-7 a:hover{text-decoration:none;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}.e-con{--container-max-width:1140px;}.elementor-widget:not(:last-child){margin-block-end:20px;}.elementor-element{--widgets-spacing:20px 20px;}{}h1.entry-title{display:var(--page-title-display);}.elementor-kit-7 e-page-transition{background-color:#FFBC7D;}.site-header .site-branding{flex-direction:column;align-items:stretch;}.site-header{padding-inline-end:0px;padding-inline-start:0px;}.site-footer .site-branding{flex-direction:column;align-items:stretch;}@media(max-width:1024px){.elementor-kit-7{--e-global-typography-ed89d88-font-size:30px;--e-global-typography-2af741e-font-size:30px;--e-global-typography-3e0a3d0-font-size:20px;--e-global-typography-179aadc-font-size:17px;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;}}@media(max-width:767px){.elementor-kit-7{--e-global-typography-ed89d88-font-size:24px;--e-global-typography-2af741e-font-size:24px;--e-global-typography-3e0a3d0-font-size:12px;--e-global-typography-179aadc-font-size:12px;--e-global-typography-5b4a69c-font-size:12px;--e-global-typography-97add7c-font-size:30px;--e-global-typography-96b465f-font-size:16px;--e-global-typography-96b465f-line-height:1.5em;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}.e-con{--container-max-width:767px;}}/* Start custom CSS *//** Change header logo and colors on homepage **/
+header .sticky-header:not(.elementor-motion-effects-element-type-background) {
+	--header-height: 115px; /* Set your own header height */
+	--shrink-header-to: 0.6; /* Shrinks to 60%, values: 0.1 to 1 */
+	--transition-timing: .45s cubic-bezier(.4, 0, .2, 1); /* values: .1s to 0.5s (or more), replace "cubic-bezier(.4, 0, .2, 1)" with "ease" if you need a simpler transition */
+	background-color: rgba(255, 255, 255, 0); /* Set your own background color */
+	transition: background-color var(--transition-timing),
+				backdrop-filter var(--transition-timing),
+				box-shadow var(--transition-timing);
+}
+
+header .sticky-header > .elementor-container {
+	min-height: var(--header-height);
+	transition: min-height var(--transition-timing);
+}
+header .sticky-header.elementor-sticky--effects > .elementor-container {
+	min-height: calc( var(--header-height) * var(--shrink-header-to) );
+}
+
+header .sticky-header.elementor-sticky--effects {
+	background-color: rgba(255, 255, 255, 1); /* Set your own background color on scroll */
+	-webkit-backdrop-filter: saturate(180%) blur(20px); /* Delete this line if you don't use transparency on scroll */
+	backdrop-filter: saturate(180%) blur(20px); /* Delete this line if you don't use transparency on scroll */
+}
+
+body:not(.page-id-249):not(.page-id-229) header .sticky-header:not(.elementor-sticky--effects) .logo img  {
+    content:url(' https://redcraftmedia.net/moderno/wp-content/uploads/2024/07/Moderno_logo-white.svg');
+}
+
+/***
+* class: .logo
+* Add the class "logo" to your logo to scale your logo to 80% on scroll
+*/
+header .sticky-header .logo img,
+header .sticky-header .logo.elementor-widget-theme-site-logo img,
+header .sticky-header .logo .elementor-icon svg {
+	--logo-height: 105.2px; /* This should be the original logo height _before_ being shrunk */
+	--logo-shrink-to: 0.70; /* Shrinks logo to 80%, values: 0.10 to 1.00, where 1.00, as in 100%, won't shrink the logo */
+	height: var(--logo-height);
+	transition: height var(--transition-timing);
+}
+header .sticky-header.elementor-sticky--effects .logo img,
+header .sticky-header.elementor-sticky--effects .logo.elementor-widget-theme-site-logo img,
+header .sticky-header.elementor-sticky--effects .logo .elementor-icon svg {
+	height: calc(var(--logo-height) * var(--logo-shrink-to));
+}
+header .sticky-header .logo .elementor-icon svg {
+	width: auto;
+}
+
+body:not(.page-id-249) header .sticky-header:not(.elementor-sticky--effects) #top-nav-menu .elementor-nav-menu--main .elementor-item {
+    color: #fff;
+}
+
+body:not(.page-id-249) header .sticky-header:not(.elementor-sticky--effects) #top-nav-menu .elementor-nav-menu--main .elementor-item:hover:after, body:not(.page-id-249)  header .sticky-header:not(.elementor-sticky--effects) #top-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active:after {
+    background-color: #fff;
+}
+
+body:not(.page-id-249) header .sticky-header:not(.elementor-sticky--effects) .ue_hamburger_custom_open svg > path {
+    fill: #fff;
+}
+
+body:not(.page-id-249) header .sticky-header .ue_hamburger_custom_close .jki-x-line:before {
+    content: "f022";
+    color: #fff;
+}
+
+#top-nav-menu .elementor-nav-menu--main .elementor-item:hover, #top-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active {
+    font-weight: 900;
+}
+
+/** sidebar **/
+.sidebar-bg {
+    width: 58px;
+}
+
+.sidebar-bg:before{
+    opacity: 0.5;
+}
+
+.siderbar-text {
+/*    left: -73px;
+    top: 240px;*/
+    left: -25px;
+    top: 332px;    
+}
+
+.siderbar-text h2 {
+    display: none;
+}
+
+.siderbar-text .elementor-widget-container:after {
+    content: "Stay Updated" !important;
+    color: #FFFFFF;
+    font-family: "Inter", Sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.sidebar-insta {
+    top: 410px;
+}
+.sidebar-linkedin {
+    top: 450px;
+}
+.sidebar-fb {
+    top: 490px;
+}
+.sidebar-yt {
+    top: 530px;
+}
+
+.sidebar-insta svg, .sidebar-linkedin svg, .sidebar-fb svg, .sidebar-yt svg {
+    font-size: 30px !important;
+}
+
+/** Portfolio **/
+.project-location {
+    font-size:17px; 
+    color:#A8a8a8a8; 
+    font-weight:300;
+}
+
+@media screen and (max-width: 1024px) {
+ .siderbar-text {
+    /*left: -81px;
+    top: 400px;*/
+    left: -30px;
+    top: 450px;
+    } 
+    .sidebar-insta {
+        top: 530px;
+    }
+    .sidebar-linkedin {
+        top: 570px;
+    }
+    .sidebar-fb {
+        top: 610px;
+    }
+    .sidebar-yt {
+        top: 650px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sidebar-bg {
+        width: 33px;
+    }
+    .siderbar-text {
+        left: -29px;
+        top: 370px;
+    } 
+    .siderbar-text .elementor-widget-container:after {
+        font-size: 14px;
+    }
+    .sidebar-insta {
+        top: 435px;
+    }
+    .sidebar-linkedin {
+        top: 470px;
+    }
+    .sidebar-fb {
+        top: 505px;
+    }
+    .sidebar-yt {
+        top: 540px;
+    }
+    
+    .sidebar-insta, .sidebar-linkedin, .sidebar-fb, .sidebar-yt {
+        left: -4px;
+    }
+
+    .sidebar-insta svg, .sidebar-linkedin svg, .sidebar-fb svg, .sidebar-yt svg {
+        font-size: 25px !important;
+    }    
+    
+    .section-header > .elementor-widget-container {
+        margin-left: 35px;
+    }
+    .section-header ul.elementor-icon-list-items.elementor-inline-items span {
+        font-size: 12px !important;
+    }
+    
+    .project-location {
+        font-size:12px; 
+    }
+}/* End custom CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'LTRemark';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url(' https://redcraftmedia.net/moderno/wp-content/uploads/2024/06/LTRemark-Regular.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */

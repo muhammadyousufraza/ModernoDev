@@ -1,0 +1,3 @@
+[2024-08-13 21:42:29] [cache_controller::purge_all] - Purged everything from Cloudflare cache!
+[2024-08-13 21:42:29] [wp_cli::purge_opcache] - OPcache has been purged successfully!
+[2024-08-13 21:42:30] [wp_cli::purge_object_cache] - Object cache has been purged successfully!
